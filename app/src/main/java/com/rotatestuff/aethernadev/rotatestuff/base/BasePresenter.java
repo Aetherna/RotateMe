@@ -6,7 +6,7 @@ import java.util.Queue;
 /**
  * Created by Aetherna on 22/12/2015.
  */
-public class BasePresenter<UI> {
+public abstract class BasePresenter<UI> {
 
     UI ui;
     Queue<UIAction<UI>> uiActions = new LinkedList<>();
@@ -35,6 +35,5 @@ public class BasePresenter<UI> {
             action.execute(ui);
         }
     }
-
 
 }

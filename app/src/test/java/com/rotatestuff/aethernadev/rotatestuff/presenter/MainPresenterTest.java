@@ -57,7 +57,7 @@ public class MainPresenterTest {
         testObject.attachUI(ui);
 
         //when
-        testObject.loadDataToShow();
+        testObject.onGoButtonClick();
 
         //then
         Mockito.verify(ui, Mockito.times(1)).showData(mockData);
@@ -74,7 +74,7 @@ public class MainPresenterTest {
         testObject.detachUI();
 
         //when
-        testObject.loadDataToShow();
+        testObject.onGoButtonClick();
 
         //then
         Mockito.verifyZeroInteractions(ui);
@@ -89,7 +89,7 @@ public class MainPresenterTest {
         Mockito.when(mockedUseCase.execute(null)).thenReturn(mockData);
 
         testObject.detachUI();
-        testObject.loadDataToShow();
+        testObject.onGoButtonClick();
 
         //when
         testObject.attachUI(ui);

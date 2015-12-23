@@ -27,7 +27,7 @@ public class MainActivityPresenter extends BasePresenter<MainActivityPresenter.M
         this.useCaseExecutor = useCaseExecutor;
     }
 
-    public void loadDataToShow() {
+    public void onGoButtonClick() {
         useCaseExecutor.wrap(useCase, null).subscribe(new Action1<List<String>>() {
             @Override
             public void call(final List<String> data) {

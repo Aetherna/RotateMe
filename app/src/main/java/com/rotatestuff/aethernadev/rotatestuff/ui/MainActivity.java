@@ -18,7 +18,6 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrese
     @Inject
     MainActivityPresenter presenter;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements MainActivityPrese
         findViewById(R.id.go).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(final View v) {
-                presenter.loadDataToShow();
+                presenter.onGoButtonClick();
             }
         });
 
